@@ -78,3 +78,6 @@
 .hero-banner__content-wrapper{
     max-width: 483px;
 }
+.hero-banner__content-wrapper h2{
+    margin-bottom: 50px;
+}
