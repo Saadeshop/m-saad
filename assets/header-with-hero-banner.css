@@ -4,4 +4,6 @@
 .header-section{
     display: flex;
     flex-direction: row;
+    max-width: var(--page-width - 10px);
+    width: 100%;
 }
