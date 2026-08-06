@@ -58,9 +58,17 @@
         "padding-block-start": 40,
         "padding-block-end": 80
       }
+    },
+    "header_with_hero_banner_FxJfrf": {
+      "type": "header-with-hero-banner",
+      "name": "Header with Hero Banner",
+      "settings": {
+        "inverse": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "header_with_hero_banner_FxJfrf"
   ]
 }
