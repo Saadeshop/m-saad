@@ -85,3 +85,10 @@
     font-size: 20px;
     margin-bottom: 50px;
 }
+.secondary--btn{
+    display: flex;
+}
+.secondary--btn a{
+    background: #000;
+    color: #fff;
+}
