@@ -81,11 +81,19 @@
             "button_label": "Shop Now",
             "button_link": "shopify://collections/all"
           }
+        },
+        "bottom_bar_YGR3WT": {
+          "type": "bottom_bar",
+          "settings": {
+            "content": "<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>",
+            "content_bg": "#F5F5F5"
+          }
         }
       },
       "block_order": [
         "header_hVL3mq",
-        "banner_api7H6"
+        "banner_api7H6",
+        "bottom_bar_YGR3WT"
       ],
       "name": "Header with Hero Banner",
       "settings": {}
