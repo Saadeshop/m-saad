@@ -60,6 +60,9 @@
 
 /* # Banner CSS
 =========================================== */
+.header-hero__banner{
+    position: relative;
+}
 .hero-banner__content{
     position: absolute;
     bottom: 51px;
