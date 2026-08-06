@@ -3,5 +3,18 @@
 }
 .header-section{
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
+}
+.hero-header-button{
+    width: 207px;
+    height: 44px;
+    background: #FFF544;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: .3s ease-in;
+    text-transform: uppercase;
 }
