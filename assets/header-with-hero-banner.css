@@ -98,4 +98,6 @@
 .secondary--btn a span {
    gap: 29px;
 }
-.secondary--btn{}
+.secondary--btn a:before{
+    background: #FFF544;
+}
