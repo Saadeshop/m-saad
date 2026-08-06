@@ -35,6 +35,9 @@
     align-items: center;
     justify-content: center;
     gap: 18px;
+    position: relative;
+    z-index: 1;
+    transition: .3s ease-in;
 }
 .hero-header-button a:before{
     content: '';
