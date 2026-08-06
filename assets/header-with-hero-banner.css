@@ -33,3 +33,9 @@
     text-transform: uppercase;
     padding: 10px;
 }
+.hero-header-button a:before{
+    content: '';
+    background: #000;
+    width: 207px;
+    height: 44px;
+}
