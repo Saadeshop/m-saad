@@ -17,7 +17,7 @@
     width: 40%;
     text-align: center;
 }
-.hero-header-button{
+.header-section .hero-header-button{
     width: 30%;
     display: flex;
     justify-content: flex-end;
@@ -84,7 +84,4 @@
 .hero-banner__content-wrapper .rte{
     font-size: 20px;
     margin-bottom: 50px;
-}
-.hero-banner__content-wrapper .hero-header-button{
-    width: 100%;
 }
