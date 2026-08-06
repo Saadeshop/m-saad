@@ -2,8 +2,5 @@
     max-width: 150px;
 }
 .header-section{
-    display: flex;
-    flex-direction: row;
-    max-width: var(--page-width - 10px);
-    width: 100%;
+    grid-column: 3;
 }
