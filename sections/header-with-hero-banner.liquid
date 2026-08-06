@@ -19,31 +19,33 @@
             }
         {% endstyle %}
 
-        <div class="section header-section" id="shopify-block-{{ block.id }}">
-            {% if logo !=blank %}
-            <a class="hero-header-logo">
-                {{-
-                    logo
-                    | image_url: width: 600
-                    | image_tag:
-                        width: logo.width,
-                        widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
-                        height: logo.height,
-                        alt: shop.name,
-                        sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
-                -}}
-            </a>
-            {% endif %}
-            {% if text !=blank %}
-            <div class="hero-header-content">
-                {{ text }}
+        <div class="section" id="shopify-block-{{ block.id }}">
+            <div class="header-section">
+                {% if logo !=blank %}
+                <a class="hero-header-logo">
+                    {{-
+                        logo
+                        | image_url: width: 600
+                        | image_tag:
+                            width: logo.width,
+                            widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
+                            height: logo.height,
+                            alt: shop.name,
+                            sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
+                    -}}
+                </a>
+                {% endif %}
+                {% if text !=blank %}
+                <div class="hero-header-content">
+                    {{ text }}
+                </div>
+                {% endif %}
+                {% if button_label !=blank %}
+                <a {% if button_link %}href="{{ button_link }}"{% endif %} class="hero-header-button">
+                    {{ button_label }}
+                </a>
+                {% endif %}
             </div>
-            {% endif %}
-            {% if button_label !=blank %}
-            <a {% if button_link %}href="{{ button_link }}"{% endif %} class="hero-header-button">
-                {{ button_label }}
-            </a>
-            {% endif %}
         </div>
     {% endif %}
 {% endfor %}
