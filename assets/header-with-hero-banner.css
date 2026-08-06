@@ -14,7 +14,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 18px;
     text-decoration: none;
     transition: .3s ease-in;
     text-transform: uppercase;
+    padding: 10px;
 }
