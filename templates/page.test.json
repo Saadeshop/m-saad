@@ -61,6 +61,20 @@
     },
     "header_with_hero_banner_FxJfrf": {
       "type": "header-with-hero-banner",
+      "blocks": {
+        "header_hVL3mq": {
+          "type": "header",
+          "settings": {
+            "text": "Find the ideal gift for your loved ones.",
+            "button_label": "Choose Gift",
+            "button_link": "",
+            "header_bg": "#F5F5F5"
+          }
+        }
+      },
+      "block_order": [
+        "header_hVL3mq"
+      ],
       "name": "Header with Hero Banner",
       "settings": {
         "logo": "shopify://shop_images/Group_1000007777.svg",
