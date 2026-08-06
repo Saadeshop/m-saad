@@ -81,3 +81,6 @@
 .hero-banner__content-wrapper h2{
     margin-bottom: 50px;
 }
+.hero-banner__content-wrapper .rte{
+    font-size: 20px;
+}
