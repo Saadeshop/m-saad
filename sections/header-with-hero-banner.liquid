@@ -1,5 +1,28 @@
 {{ 'header-with-hero-banner.css' | asset_url | stylesheet_tag: preload: true }}
 
+{% liquid
+  assign logo = section.settings.logo
+  assign text = section.settings.text
+  assign button_label = section.settings.button_label
+  assign button_link = section.settings.button_link
+%}
+
+<div class="section">
+    {% if logo !=blank %}
+    <a class="hero-header-logo">
+        {{-
+            logo
+            | image_url: width: 600
+            | image_tag:
+                width: logo.width,
+                widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
+                height: logo.height,
+                alt: shop.name,
+                sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
+        -}}
+    </a>
+    {% endif %}
+</div>
 
 {% schema %}
 {
