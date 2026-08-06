@@ -9,8 +9,15 @@
   assign header_bg = section.settings.header_bg
 %}
 
+{% comment %} Specific CSS {% endcomment %}
+ {% style %}
+ #shopify-section-{{ section.id }} .header-section{
+    background: {{ header_bg }};
+ }
+ {% endstyle %}
+
 {% comment %} HTML Markup {% endcomment %}
-<div class="section">
+<div class="section header-section">
     {% if logo !=blank %}
     <a class="hero-header-logo">
         {{-
