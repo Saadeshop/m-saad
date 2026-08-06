@@ -1,3 +1,5 @@
+/* # Header CSS
+=========================================== */
 .hero-header-logo img{
     max-width: 150px;
 }
@@ -54,4 +56,11 @@
 }
 .hero-header-button a:hover span{
     color: #fff;
+}
+
+/* # Banner CSS
+=========================================== */
+.hero-banner__content{
+    position: absolute;
+    bottom: 51px;
 }
