@@ -75,6 +75,23 @@
                     -}}
                 </div>
             </div>
+            <div class="hero-banner__content">
+                {% if heading !=blank %}
+                    <h2>{{ heading }}</h2>
+                {% endif %}
+
+                {% if subheading !=blank %}
+                <div class="rte">{{ subheading }}</div>
+                {% endif %}
+
+                {% if button_label !=blank %}
+                <div class="hero-banner-button">
+                    <a {% if button_link %}href="{{ button_link }}"{% endif %}>
+                        <span>{{ button_label }} {% render 'icon-arrow-right' %}</span>
+                    </a>
+                </div>
+                {% endif %}
+            </div>
             {% endif %}
         </div>
 
