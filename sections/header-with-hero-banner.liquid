@@ -1,3 +1,4 @@
+{% comment %} Header with Hero Banner {% endcomment %}
 {{ 'header-with-hero-banner.css' | asset_url | stylesheet_tag: preload: true }}
 
 {% liquid
@@ -5,8 +6,10 @@
   assign text = section.settings.text
   assign button_label = section.settings.button_label
   assign button_link = section.settings.button_link
+  assign header_bg = section.settings.header_bg
 %}
 
+{% comment %} HTML Markup {% endcomment %}
 <div class="section">
     {% if logo !=blank %}
     <a class="hero-header-logo">
