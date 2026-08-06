@@ -7,6 +7,12 @@
     justify-content: space-between;
     width: 100%;
 }
+.hero-header-logo{
+    width: 30%;
+}
+.hero-header-content{
+    width: 40%;
+}
 .hero-header-button{
     width: 207px;
     height: 44px;
