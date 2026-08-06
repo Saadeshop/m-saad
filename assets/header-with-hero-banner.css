@@ -101,3 +101,6 @@
 .secondary--btn a:before{
     background: #FFF544;
 }
+.secondary--btn a:hover span{
+    color: #000;
+}
