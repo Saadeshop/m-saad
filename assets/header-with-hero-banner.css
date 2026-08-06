@@ -12,8 +12,14 @@
 }
 .hero-header-content{
     width: 40%;
+    text-align: center;
 }
 .hero-header-button{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-header-button a{
     width: 207px;
     height: 44px;
     background: #FFF544;
