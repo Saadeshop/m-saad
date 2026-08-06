@@ -25,7 +25,6 @@
     height: 44px;
     background: #FFF544;
     text-decoration: none;
-    transition: .3s ease-in;
     text-transform: uppercase;
     padding: 10px;
     position: relative;
@@ -45,6 +44,7 @@
     position: absolute;
     left: -100%;
     top: 0;
+    transition: .3s ease-in;
 }
 .hero-header-button a:hover:before{
     left: 0;
