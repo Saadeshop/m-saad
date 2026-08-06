@@ -73,6 +73,7 @@
     height: 100%;
     align-items: flex-end;
     margin: 0 auto;
+    padding-bottom: 51px;
 }
 .hero-banner__content-wrapper{
     max-width: 483px;
