@@ -24,14 +24,16 @@
     width: 207px;
     height: 44px;
     background: #FFF544;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
     text-decoration: none;
     transition: .3s ease-in;
     text-transform: uppercase;
     padding: 10px;
+}
+.hero-header-button a span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
 }
 .hero-header-button a:before{
     content: '';
