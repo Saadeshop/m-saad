@@ -1,0 +1,23 @@
+{{ 'header-with-hero-banner.css' | asset_url | stylesheet_tag: preload: true }}
+
+
+{% schema %}
+{
+  "name": "Header with Hero Banner",
+  "class": "header-hero-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "label": "t:settings.use_inverse_logo",
+      "id": "inverse",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header with Hero Banner",
+      "category": "Banners"
+    }
+  ]
+}
+{% endschema %}
