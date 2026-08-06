@@ -65,7 +65,10 @@
 }
 .hero-banner__content{
     position: absolute;
-    bottom: 51px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     max-width: 1440px;
 }
 .hero-banner__content-wrapper{
