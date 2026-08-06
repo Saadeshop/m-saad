@@ -1,48 +1,52 @@
 {% comment %} Header with Hero Banner {% endcomment %}
 {{ 'header-with-hero-banner.css' | asset_url | stylesheet_tag: preload: true }}
 
-{% liquid
-  assign logo = section.settings.logo
-  assign text = section.settings.text
-  assign button_label = section.settings.button_label
-  assign button_link = section.settings.button_link
-  assign header_bg = section.settings.header_bg
-%}
-
-{% comment %} Specific CSS {% endcomment %}
- {% style %}
- #shopify-section-{{ section.id }} .header-section{
-    background: {{ header_bg }};
- }
- {% endstyle %}
-
 {% comment %} HTML Markup {% endcomment %}
-<div class="section header-section">
-    {% if logo !=blank %}
-    <a class="hero-header-logo">
-        {{-
-            logo
-            | image_url: width: 600
-            | image_tag:
-                width: logo.width,
-                widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
-                height: logo.height,
-                alt: shop.name,
-                sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
-        -}}
-    </a>
+{% for block in section.blocks %}
+    {% if block.type == 'header' %}
+
+        {% liquid
+            assign logo = block.settings.logo
+            assign text = block.settings.text
+            assign button_label = block.settings.button_label
+            assign button_link = block.settings.button_link
+            assign header_bg = block.settings.header_bg
+        %}
+
+         {% style %}
+            #shopify-block-{{ block.id }} {
+                background: {{ header_bg }};
+            }
+        {% endstyle %}
+
+        <div class="section header-section" id="shopify-block-{{ block.id }}">
+            {% if logo !=blank %}
+            <a class="hero-header-logo">
+                {{-
+                    logo
+                    | image_url: width: 600
+                    | image_tag:
+                        width: logo.width,
+                        widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
+                        height: logo.height,
+                        alt: shop.name,
+                        sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
+                -}}
+            </a>
+            {% endif %}
+            {% if text !=blank %}
+            <div class="hero-header-content">
+                {{ text }}
+            </div>
+            {% endif %}
+            {% if button_label !=blank %}
+            <a {% if button_link %}href="{{ button_link }}"{% endif %} class="hero-header-button">
+                {{ button_label }}
+            </a>
+            {% endif %}
+        </div>
     {% endif %}
-    {% if text !=blank %}
-    <div class="hero-header-content">
-        {{ text }}
-    </div>
-    {% endif %}
-    {% if button_label !=blank %}
-    <a {% if button_link %}href="{{ button_link }}"{% endif %} class="hero-header-button">
-        {{ button_label }}
-    </a>
-    {% endif %}
-</div>
+{% endfor %}
 
 {% schema %}
 {
@@ -85,6 +89,50 @@
       "id": "header_bg",
       "default": "#F5F5F5"
     },
+  ],
+  "blocks": [
+    {
+        "name": "Header",
+        "type": "header",
+        "settings": [
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "image_picker",
+            "label": "Logo",
+            "id": "logo"
+        },
+        {
+            "type": "text",
+            "label": "Text",
+            "id": "text",
+            "default": "Find the ideal gift for your loved ones."
+        },
+        {
+            "type": "text",
+            "label": "Button label",
+            "id": "button_label",
+            "default": "Choose Gift"
+        },
+        {
+            "type": "text",
+            "label": "Button link",
+            "id": "button_link"
+        },
+        {
+            "type": "header",
+            "content": "Colors"
+        },
+        {
+            "type": "color_background",
+            "label": "Header background",
+            "id": "header_bg",
+            "default": "#F5F5F5"
+        }
+    ]
+    }
   ],
   "presets": [
     {
