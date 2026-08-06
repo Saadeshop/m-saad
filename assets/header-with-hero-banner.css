@@ -85,3 +85,6 @@
     font-size: 20px;
     margin-bottom: 50px;
 }
+.hero-banner__content-wrapper .hero-header-button{
+    width: 100%;
+}
