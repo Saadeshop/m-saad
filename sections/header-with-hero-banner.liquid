@@ -98,7 +98,24 @@
         </div>
 
     {% elsif block.type == 'bottom_bar' %}
-        <div class="header-hero__bottom-bar" id="shopify-block-{{ block.id }}"></div>
+        {% liquid
+            assign content = block.settings.content
+            assign content_bg = block.settings.content_bg
+         %}
+
+         {% style %}
+            #shopify-block-{{ block.id }} {
+                background: {{ content_bg }};
+            }
+         {% endstyle %}
+
+        {% if content !=blank %}
+        <div class="header-hero__bottom-bar" id="shopify-block-{{ block.id }}">
+            <div class="header-bottom__content">
+                {{ content }}
+            </div>
+        </div>
+        {% endif %}
     {% endif %}
 {% endfor %}
 
@@ -180,10 +197,28 @@
                 "type": "url",
                 "label": "Button link",
                 "id": "button_link"
+            }
+        ]
+    },
+    {
+        "name": "Bottom Bar",
+        "type": "bottom_bar",
+        "settings": [
+            {
+                "type": "richtext",
+                "label": "Content",
+                "id": "content",
+                "default": "<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>"
             },
             {
                 "type": "header",
                 "content": "Colors"
+            },
+            {
+                "type": "color_background",
+                "label": "Background",
+                "id": "content_bg",
+                "default": "#F5F5F5"
             }
         ]
     }
