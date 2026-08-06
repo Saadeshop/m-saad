@@ -67,9 +67,14 @@
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
     max-width: 1440px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
 }
 .hero-banner__content-wrapper{
     max-width: 483px;
