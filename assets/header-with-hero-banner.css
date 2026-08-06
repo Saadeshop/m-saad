@@ -49,3 +49,6 @@
 .hero-header-button a:hover:before{
     left: 0;
 }
+.hero-header-button a:hover span{
+    color: #fff;
+}
