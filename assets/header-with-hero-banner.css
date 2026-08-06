@@ -38,4 +38,6 @@
     background: #000;
     width: 207px;
     height: 44px;
+    position: absolute;
+    left: -100%;
 }
