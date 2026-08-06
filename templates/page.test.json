@@ -63,7 +63,10 @@
       "type": "header-with-hero-banner",
       "name": "Header with Hero Banner",
       "settings": {
-        "inverse": false
+        "logo": "shopify://shop_images/Group_1000007777.png",
+        "text": "Find the ideal gift for your loved ones.",
+        "button_label": "Choose Gift",
+        "button_link": ""
       }
     }
   },
