@@ -91,4 +91,6 @@
 .secondary--btn a{
     background: #000;
     color: #fff;
+    width: 220px;
+    height: 50px;
 }
