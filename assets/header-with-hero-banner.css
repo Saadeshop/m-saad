@@ -40,6 +40,7 @@
     position: relative;
     z-index: 1;
     transition: .3s ease-in;
+    height: 100%;
 }
 .hero-header-button a:before{
     content: '';
@@ -94,3 +95,7 @@
     width: 220px;
     height: 50px;
 }
+.secondary--btn a span {
+   gap: 29px;
+}
+.secondary--btn{}
