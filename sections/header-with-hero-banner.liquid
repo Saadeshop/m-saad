@@ -41,9 +41,11 @@
                 </div>
                 {% endif %}
                 {% if button_label !=blank %}
-                <a {% if button_link %}href="{{ button_link }}"{% endif %} class="hero-header-button">
-                    {{ button_label }} {% render 'icon-arrow-right' %} 
-                </a>
+                <div class="hero-header-button">
+                    <a {% if button_link %}href="{{ button_link }}"{% endif %}>
+                        {{ button_label }} {% render 'icon-arrow-right' %} 
+                    </a>
+                </div>
                 {% endif %}
             </div>
         </div>
