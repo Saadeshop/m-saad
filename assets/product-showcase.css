@@ -1,0 +1,8 @@
+.product-grid-showcase{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-showcase-card{
+    width: calc(33.333% - 10px);
+    margin: 0 10px;
+}
