@@ -73,3 +73,7 @@
     line-height: 1;
     margin-bottom: 6px;
 }
+.popup-details{
+    display: flex;
+    flex-direction: column;
+}
