@@ -12,7 +12,15 @@
 }
 .popup-overlay {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000021;
+    align-items: center;
+    justify-content: center;
 }
 .popup-overlay.active{
-    display: block;
+    display: flex;
 }
