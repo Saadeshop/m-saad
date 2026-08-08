@@ -10,7 +10,7 @@
             %}
 
             {% if product !=blank %}
-                <div class="product-card">
+                <div class="product-showcase-card">
                     <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
                 </div>
             {% endif %}
