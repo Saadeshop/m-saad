@@ -97,6 +97,7 @@
     padding: 9px;
     line-height: 1;
     position: relative;
+    cursor: pointer;
 }
 .is-color button:first-child{
     border-left: 1px solid #000;
