@@ -119,7 +119,7 @@
 
 <script>
 document.addEventListener('click', e => {
-    const card = e.target.closest('[data-popup] .popup-image-wrapper span');
+    const card = e.target.closest('[data-popup]');
     const close = e.target.closest('[data-close-popup]');
     const toggle = e.target.closest('.custom-select-toggle');
     const option = e.target.closest('.custom-select-option, .option-value');
