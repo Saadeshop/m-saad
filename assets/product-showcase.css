@@ -224,3 +224,6 @@
         transform: rotate(360deg);
     }
 }
+.popup-image-wrapper{
+    position: relative;
+}
