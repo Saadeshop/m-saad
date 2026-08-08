@@ -110,3 +110,6 @@
     left: 0;
     border-right: 1px solid #000;
 }
+.popup-form{
+    order: 3;
+}
