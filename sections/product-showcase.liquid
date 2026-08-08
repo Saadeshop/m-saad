@@ -14,17 +14,18 @@
             assign left = block.settings.left
             %}
 
-            {% style %}
-            [popup-{{ block.id }}] .popup-dot{
-                position: absolute;
-                top: {{ top }}%;
-                left: {{ left }}%;
-                transform: translate(-{{ left }}, -{{ top }}%);
-            }
-            {% endstyle %}
-
             {% if product !=blank %}
                 <div class="product-showcase-card" data-popup="popup-{{ block.id }}">
+
+                    {% style %}
+                    [popup-{{ block.id }}] .popup-dot{
+                        position: absolute;
+                        top: {{ top }}%;
+                        left: {{ left }}%;
+                        transform: translate(-{{ left }}, -{{ top }}%);
+                    }
+                    {% endstyle %}
+
                     <div class="popup-image-wrapper">
                         <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
                         <span class="popup-dot">{% render 'icon-plus' %}</span>
