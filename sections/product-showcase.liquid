@@ -42,8 +42,23 @@
                                                     <span>Select {{ option.name }}</span>
                                                     <span>{% render 'icon-caret-down' %}</span>
                                                 </button>
+
+                                                <div class="custom-select-menu">
+                                                    {% for value in option.values %}
+                                                        <button type="button" class="custom-select-option" data-option-value="{{ value | escape }}">
+                                                            {{ value }}
+                                                        </button>
+                                                    {% endfor %}
+                                                </div>
                                             </div>
                                         {% else %}
+                                            <div class="option-values">
+                                                {% for value in option.values %}
+                                                    <button type="button" class="option-value" data-option-value="{{ value | escape }}">
+                                                        {{ value }}
+                                                    </button>
+                                                {% endfor %}
+                                            </div>
                                         {% endif %}
                                     </div>
                                 {% endfor %}
