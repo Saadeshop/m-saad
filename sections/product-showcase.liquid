@@ -1,4 +1,5 @@
 {% comment %} Product Showcase {% endcomment %}
+ {{ 'product-showcase.css' | asset_url | stylesheet_tag: preload: true }}
 
 <div class="product-grid section">
     {% for block in section.blocks %}
