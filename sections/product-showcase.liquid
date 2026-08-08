@@ -10,8 +10,30 @@
             %}
 
             {% if product !=blank %}
-                <div class="product-showcase-card">
+                <div class="product-showcase-card" data-popup="popup-{{ block.id }}">
                     <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                </div>
+
+                <div class="popup-overlay" id="popup-{{ block.id }}">
+                    <div class="popup">
+                        <button class="close" type="button" data-close-popup>
+                            {% render 'icon-close' %}
+                        </button>
+                        <div class="popup-content">
+                            {% if product.featured_image %}
+                                <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                            {% endif %}
+
+                            <div class="popup-details">
+                                <h3>{{ product.title }}</h3>
+                                <p class="price">{{ product.price | money }}</p>
+
+                                <div class="popup-description">
+                                    {{ product.description }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             {% endif %}
         {% endfor %}
