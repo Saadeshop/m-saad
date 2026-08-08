@@ -1,6 +1,10 @@
 {% comment %} Product Showcase {% endcomment %}
  {{ 'product-showcase.css' | asset_url | stylesheet_tag: preload: true }}
 
+ {% liquid
+   assign auto_add_product = section.settings.auto_add_product
+ %}
+
 <div class="section">
     <div class="product-grid-showcase">
         {% for block in section.blocks %}
@@ -62,8 +66,32 @@
                                         {% endif %}
                                     </div>
                                 {% endfor %}
+
+                                <form class="popup-form">
+                                    <input type="hidden" name="id" value="">
+
+                                    <button type="button" class="option-atc">
+                                        <span class="atc-text">ADD TO CART</span>
+                                        <span class="atc-spinner"></span>
+                                    </button>
+
+                                    <div class="variant-message"></div>
+                                </form>
                             </div>
                         </div>
+
+                        <script type="application/json" class="product-variants">
+                            {{ product.variants | json }}
+                        </script>
+
+                        {% if auto_add_product !=blank %}
+                            <script type="application/json" class="auto-add-product">
+                                {
+                                    "id": {{ auto_add_product.selected_or_first_available_variant.id }},
+                                    "title": {{ auto_add_product.title | json }}
+                                }
+                            </script>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}
