@@ -117,7 +117,7 @@ document.addEventListener('click', e => {
     if(toggle) {
         const select = toggle.closest('.custom-select');
 
-        document.querySelectorAll('.custom-select.open').foreach(item => {
+        document.querySelectorAll('.custom-select.open').forEach(item => {
             if(item !== select) item.classList.remove('.open');
         });
 
