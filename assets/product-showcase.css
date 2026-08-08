@@ -10,3 +10,9 @@
     height: 444px;
     object-fit: cover;
 }
+.popup-overlay {
+    display: none;
+}
+.popup-overlay.active{
+    display: block;
+}
