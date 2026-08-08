@@ -125,3 +125,8 @@
     justify-content: space-between;
     padding: 0 16px 0 13px;
 }
+.custom-select-toggle{}
+.custom-toggle-icon{
+    border-left: 1px solid #000;
+    padding-left: 16px;
+}
