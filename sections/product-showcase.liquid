@@ -187,7 +187,7 @@ document.addEventListener('click', e => {
 
         const variant = variants.find(variant => variant.id === id);
 
-        id (!variant) {
+        if (!variant) {
             message.textContent = 'This combination is unavailable';
             return;
         }
