@@ -2212,6 +2212,7 @@ main > .shopify-section:first-child .section:not(.disable-section-top-offset) {
 }
 
 .template--test .shopify-section-group-header-group,
-.template--test .shopify-section-group-header-group{
+.template--test .shopify-section-group-header-group,
+.template--test footer{
   display: none;
 }
