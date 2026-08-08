@@ -146,9 +146,9 @@ document.addEventListener('click', e => {
 
         popup.querySelectorAll('.product-option').forEach(group => {
             const position = Number(group.dataset.optionPosition);
-            const selectedOption = group.querySelector{
+            const selectedOption = group.querySelector(
                 '.custom-select-option.selected, .option-value.selected'
-            };
+            );
 
             selected[position - 1] = selectedOption?.dataset.optionValue;
         });
