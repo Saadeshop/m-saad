@@ -35,6 +35,16 @@
                                 {% for option in product.options_with_values %}
                                     <div class="product-option" data-option-position="{{ option.position }}">
                                         <label>{{ option.name }}</label>
+
+                                        {% if option.name == 'Size' or option.name == 'size' %}
+                                            <div class="custom-select">
+                                                <button type="button" class="custom-select-toggle">
+                                                    <span>Select {{ option.name }}</span>
+                                                    <span>{% render 'icon-caret-down' %}</span>
+                                                </button>
+                                            </div>
+                                        {% else %}
+                                        {% endif %}
                                     </div>
                                 {% endfor %}
                             </div>
