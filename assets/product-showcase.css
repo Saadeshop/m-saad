@@ -34,3 +34,8 @@
     height: 140px;
     object-fit: cover;
 }
+.popup-image{
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
