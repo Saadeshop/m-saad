@@ -105,6 +105,7 @@ document.addEventListener('click', e => {
     const close = e.target.closest('[data-close-popup]');
     const toggle = e.target.closest('.custom-select-toggle');
     const option = e.target.closest('.custom-select-option, .option-value');
+    const atc = e.target.closest('.popup-atc');
 
     if(card) {
         document.getElementById(card.dataset.popup).classList.add('active');
