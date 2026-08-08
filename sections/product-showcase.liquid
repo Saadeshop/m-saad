@@ -15,7 +15,7 @@
             %}
 
             {% if product !=blank %}
-                <div class="product-showcase-card">
+                <div class="product-showcase-card" data-popup="popup-{{ block.id }}">
 
                     {% style %}
                     .popup-dot-{{ block.id }}{
@@ -28,7 +28,7 @@
 
                     <div class="popup-image-wrapper">
                         <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
-                        <span class="popup-dot-{{ block.id }}" data-popup="popup-{{ block.id }}">{% render 'icon-plus' %}</span>
+                        <span class="popup-dot-{{ block.id }}">{% render 'icon-plus' %}</span>
                     </div>
                 </div>
 
@@ -119,7 +119,7 @@
 
 <script>
 document.addEventListener('click', e => {
-    const card = e.target.closest('[data-popup]');
+    const card = e.target.closest('[data-popup] .popup-image-wrapper span');
     const close = e.target.closest('[data-close-popup]');
     const toggle = e.target.closest('.custom-select-toggle');
     const option = e.target.closest('.custom-select-option, .option-value');
