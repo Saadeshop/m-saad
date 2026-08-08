@@ -3,6 +3,6 @@
     flex-wrap: wrap;
 }
 .product-showcase-card{
-    width: calc(33.333% - 10px);
-    margin: 0 10px;
+    width: calc(33.333% - 20px);
+    margin: 0 10px 20px;
 }
