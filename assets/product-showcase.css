@@ -6,3 +6,7 @@
     width: calc(33.333% - 20px);
     margin: 0 10px 20px;
 }
+.product-showcase-card img{
+    height: 444px;
+    object-fit: cover;
+}
