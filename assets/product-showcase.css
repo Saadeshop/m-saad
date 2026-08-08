@@ -52,4 +52,12 @@
     font-weight: 300;
     margin-bottom: 20px;
     font-family: Jost;
+    line-height: 1;
+}
+.popup-info .price{
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: lustria;
+    line-height: 1;
 }
