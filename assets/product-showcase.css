@@ -24,3 +24,8 @@
 .popup-overlay.active{
     display: flex;
 }
+.popup{
+    background: #fff;
+    max-width: 311px;
+    padding: 36px 17px 25px;
+}
