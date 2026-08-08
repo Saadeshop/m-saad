@@ -97,10 +97,16 @@
       ],
       "name": "Header with Hero Banner",
       "settings": {}
+    },
+    "product_showcase_PQ7qWB": {
+      "type": "product-showcase",
+      "name": "Product Showcase",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "header_with_hero_banner_FxJfrf"
+    "header_with_hero_banner_FxJfrf",
+    "product_showcase_PQ7qWB"
   ]
 }
