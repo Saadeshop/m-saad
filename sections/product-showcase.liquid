@@ -31,6 +31,12 @@
                                 <div class="popup-description">
                                     {{ product.description }}
                                 </div>
+
+                                {% for option in product.options_with_values %}
+                                    <div class="product-option" data-option-position="{{ option.position }}">
+                                        <label>{{ option.name }}</label>
+                                    </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
