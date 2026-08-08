@@ -3,10 +3,16 @@
 
  {% liquid
    assign auto_add_product = section.settings.auto_add_product
+   assign title = section.settings.title
  %}
 
+{% if title !=blank %}
 <div class="section">
-    hello
+    <div class="product-showcase-title">{{ title }}</div>
+</div>
+{% endif %}
+
+<div class="section">
     <div class="product-grid-showcase">
         {% for block in section.blocks %}
             {% liquid
@@ -292,6 +298,12 @@ document.addEventListener('click', e => {
   "class": "product-showcase-section",
   "max_blocks": 6,
   "settings": [
+    {
+        "type": "text",
+        "label": "Title",
+        "id": "title",
+        "default": "Tisso vison in the wild"
+    },
     {
         "type": "product",
         "label": "Automatically add product",
