@@ -26,7 +26,10 @@
                         <div class="popup-content">
                             <div class="popup-image">
                             {% if product.featured_image %}
-                                <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                                <div class="popup-image-wrapper">
+                                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                                    <span>{% render 'icon-plus' %}</span>
+                                </div>
                             {% endif %}
 
                             <div class="popup-info">
