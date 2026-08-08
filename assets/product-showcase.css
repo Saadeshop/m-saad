@@ -67,3 +67,9 @@
     letter-spacing: -1%;
     line-height: 110%;
 }
+.popup label{
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    margin-bottom: 6px;
+}
