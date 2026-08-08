@@ -131,6 +131,16 @@ document.addEventListener('click', e => {
         const variants = JSON.parse(popup.querySelector('.product-variants').textContent);
 
         group.querySelectorAll.('.custom-select-option.selected, .option-value.selected')
+            .forEach(item => item.classList.remove('selected'));
+
+        option.classList.add('selected');
+
+        const select = option.closest('.custom-select');
+        if (select) {
+            select.querySelector('.custom-select-toggle span').textContent = option.dataset.optionValue;
+            select.querySelector('.custom-select-toggle').classList.add('selected');
+            select.classList.remove('open');
+        }
     }
 })
 </script>
