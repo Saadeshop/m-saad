@@ -41,7 +41,7 @@
 
                             <div class="popup-details">
                                 {% for option in product.options_with_values %}
-                                    <div class="product-option" data-option-position="{{ option.position }}">
+                                    <div class="product-option is-{{ option.name | handleize }}" data-option-position="{{ option.position }}">
                                         <label>{{ option.name }}</label>
 
                                         {% if option.name == 'Size' or option.name == 'size' %}
