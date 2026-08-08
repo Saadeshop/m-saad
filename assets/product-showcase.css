@@ -239,5 +239,5 @@
 .product-showcase-title{
     font-size: 36px;
     font-family: lustria;
-    margin: 0 0 30px;
+    margin: 0 0 30px !important;
 }
