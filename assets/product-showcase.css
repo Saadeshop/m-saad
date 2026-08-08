@@ -86,6 +86,7 @@
 }
 .is-color button{
     border: 1px solid #000;
+    border-left: 0;
     font-size: 18px;
     outline: none;
     font-family: Jost;
@@ -96,6 +97,9 @@
     padding: 9px;
     line-height: 1;
     position: relative;
+}
+.is-color button:first-child{
+    border-left: 1px solid #000;
 }
 .is-color button span{
     width: 5px;
