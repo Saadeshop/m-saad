@@ -100,8 +100,56 @@
     },
     "product_showcase_PQ7qWB": {
       "type": "product-showcase",
+      "blocks": {
+        "product_bApJPJ": {
+          "type": "product",
+          "settings": {
+            "product": "black-leather-bag"
+          }
+        },
+        "product_BXianz": {
+          "type": "product",
+          "settings": {
+            "product": "blue-silk-tuxedo"
+          }
+        },
+        "product_7MzQ8c": {
+          "type": "product",
+          "settings": {
+            "product": "chequered-red-shirt"
+          }
+        },
+        "product_etwGqK": {
+          "type": "product",
+          "settings": {
+            "product": "classic-leather-jacket"
+          }
+        },
+        "product_mh3jgX": {
+          "type": "product",
+          "settings": {
+            "product": "classic-varsity-top"
+          }
+        },
+        "product_wx7934": {
+          "type": "product",
+          "settings": {
+            "product": "dark-denim-top"
+          }
+        }
+      },
+      "block_order": [
+        "product_bApJPJ",
+        "product_BXianz",
+        "product_7MzQ8c",
+        "product_etwGqK",
+        "product_mh3jgX",
+        "product_wx7934"
+      ],
       "name": "Product Showcase",
-      "settings": {}
+      "settings": {
+        "auto_add_product": "dark-winter-jacket"
+      }
     }
   },
   "order": [
