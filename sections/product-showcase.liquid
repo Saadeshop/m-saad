@@ -99,6 +99,42 @@
     </div>
 </div>
 
+<script>
+document.addEventListener('click', e => {
+    const card = e.target.closest('[data-popup]');
+    const close = e.target.closest('[data-close-popup]');
+    const toggle = e.target.closest('.custom-select-toggle');
+    const option = e.target.closest('.custom-select-option, .option-value');
+
+    if(card) {
+        document.getElementById(card.dataset.popup).classList.add('active');
+        return;
+    }
+    if(close) {
+        close.closest('.popup-overlay').classList.remove('active');
+        return;
+    }
+    if(toggle) {
+        const select = toggle.closest('.custom-select');
+
+        document.querySelectorAll('.custom-select.open').foreach(item => {
+            if(item !== select) item.classList.remove('.open');
+        });
+
+        select.classList.toggle.('open');
+        return;
+    }
+
+    if (option) {
+        const popup = option.closest('.popup');
+        const group = option.closest('.product-option');
+        const variants = JSON.parse(popup.querySelector('.product-variants').textContent);
+
+        group.querySelectorAll.('.custom-select-option.selected, .option-value.selected')
+    }
+})
+</script>
+
 {% schema %}
 {
   "name": "Product Showcase",
