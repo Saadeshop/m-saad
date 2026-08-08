@@ -28,6 +28,7 @@
     background: #fff;
     max-width: 311px;
     padding: 36px 17px 25px;
+    position: relative;
 }
 .popup-content img{
     max-width: 120px;
@@ -38,4 +39,11 @@
     display: flex;
     align-items: flex-end;
     gap: 8px;
+}
+.popup .close{
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
 }
