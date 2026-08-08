@@ -2,7 +2,7 @@
  {{ 'product-showcase.css' | asset_url | stylesheet_tag: preload: true }}
 
 <div class="section">
-    <div class="product-grid">
+    <div class="product-grid-showcase">
         {% for block in section.blocks %}
             {% liquid
             assign product = block.settings.product
