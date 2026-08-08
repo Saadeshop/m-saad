@@ -157,6 +157,9 @@
     position: absolute;
     width: 100%;
     border-top: 0;
+    max-height: 100px;
+    overflow: hidden;
+    overflow-y: auto;
 }
 .custom-select-menu .custom-select-option{
     height: 36px;
