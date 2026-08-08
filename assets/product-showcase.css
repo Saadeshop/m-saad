@@ -198,3 +198,29 @@
     gap: 28px;
     justify-content: center;
 }
+.atc-spinner{
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear inifinite;
+}
+.popup-atc.loading .atc-text{
+    display: none;
+}
+.popup-atc.loading .atc-spinner{
+    display: block;
+}
+.variant-message{
+    margin-top: 8px;
+    color: #d00;
+    font-size: 14px;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
