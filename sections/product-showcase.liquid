@@ -130,7 +130,7 @@ document.addEventListener('click', e => {
         const group = option.closest('.product-option');
         const variants = JSON.parse(popup.querySelector('.product-variants').textContent);
 
-        group.querySelectorAll.('.custom-select-option.selected, .option-value.selected')
+        group.querySelectorAll('.custom-select-option.selected, .option-value.selected')
             .forEach(item => item.classList.remove('selected'));
 
         option.classList.add('selected');
