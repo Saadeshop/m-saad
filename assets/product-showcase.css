@@ -148,6 +148,7 @@
 .custom-select-menu{
     border: 1px solid #000;
     background: #fff;
+    outline: 0;
 }
 .custom-select-menu .custom-select-option{
     height: 36px;
