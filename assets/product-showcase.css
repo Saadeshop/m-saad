@@ -1,7 +1,9 @@
+.product-showcase-section{
+    padding: 90px 0 30px;
+}
 .product-grid-showcase{
     display: flex;
     flex-wrap: wrap;
-    padding: 90px 0 30px;
 }
 .product-showcase-card{
     width: calc(33.333% - 20px);
