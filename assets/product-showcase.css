@@ -29,3 +29,8 @@
     max-width: 311px;
     padding: 36px 17px 25px;
 }
+.popup-content img{
+    max-width: 120px;
+    height: 140px;
+    object-fit: cover;
+}
