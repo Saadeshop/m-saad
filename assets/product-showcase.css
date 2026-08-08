@@ -95,4 +95,12 @@
     text-align: left;
     padding: 9px;
     line-height: 1;
+    position: relative;
+}
+.is-color button span{
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
