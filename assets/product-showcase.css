@@ -179,3 +179,16 @@
     opacity: 1;
     visibility: visible;
 }
+.popup-atc{
+    height: 45px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    background: #000;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+}
