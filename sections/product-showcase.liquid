@@ -63,7 +63,7 @@
                                             <div class="option-values">
                                                 {% for value in option.values %}
                                                     <button type="button" class="option-value" data-option-value="{{ value | escape }}">
-                                                        <span style="background: {{ value }};"></span>{{ value }}
+                                                        {{ value }}
                                                     </button>
                                                 {% endfor %}
                                             </div>

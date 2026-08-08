@@ -80,6 +80,10 @@
 .is-size{
     order: 2;
 }
+.is-color .option-values{
+    display: flex;
+    flex-wrap: wrap;
+}
 .is-color button{
     border: 1px solid #000;
     font-size: 18px;
