@@ -1,19 +1,21 @@
 {% comment %} Product Showcase {% endcomment %}
  {{ 'product-showcase.css' | asset_url | stylesheet_tag: preload: true }}
 
-<div class="product-grid section">
-    {% for block in section.blocks %}
-        {% liquid
-          assign product = block.settings.product
-          assign dot = block.settings.dot
-        %}
+<div class="section">
+    <div class="product-grid">
+        {% for block in section.blocks %}
+            {% liquid
+            assign product = block.settings.product
+            assign dot = block.settings.dot
+            %}
 
-        {% if product !=blank %}
-            <div class="product-card">
-                <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
-            </div>
-        {% endif %}
-    {% endfor %}
+            {% if product !=blank %}
+                <div class="product-card">
+                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
 
 {% schema %}
