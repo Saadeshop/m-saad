@@ -228,3 +228,6 @@
 .popup-image-wrapper{
     position: relative;
 }
+.popup-image-wrapper span{
+    cursor: pointer;
+}
