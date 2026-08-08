@@ -148,6 +148,9 @@
 .custom-select-menu{
     border: 1px solid #000;
     background: #fff;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
 }
 .custom-select-menu .custom-select-option{
     height: 36px;
@@ -161,4 +164,8 @@
 .custom-select-menu .custom-select-option:hover{
     background: #000;
     color: #fff;
+}
+.custom-select.open .custom-select-menu{
+    opacity: 1;
+    visibility: visible;
 }
