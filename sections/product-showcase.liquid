@@ -15,7 +15,10 @@
 
             {% if product !=blank %}
                 <div class="product-showcase-card" data-popup="popup-{{ block.id }}">
-                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                    <div class="popup-image-wrapper">
+                        <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
+                        <span>{% render 'icon-plus' %}</span>
+                    </div>
                 </div>
 
                 <div class="popup-overlay" id="popup-{{ block.id }}">
@@ -26,9 +29,7 @@
                         <div class="popup-content">
                             <div class="popup-image">
                             {% if product.featured_image %}
-                                <div class="popup-image-wrapper">
-                                    <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
-                                    <span>{% render 'icon-plus' %}</span>
+                                <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
                                 </div>
                             {% endif %}
 
