@@ -24,18 +24,22 @@
                             {% render 'icon-close' %}
                         </button>
                         <div class="popup-content">
+                            <div class="popup-image">
                             {% if product.featured_image %}
                                 <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.title | escape }}" loading="lazy">
                             {% endif %}
 
-                            <div class="popup-details">
+                            <div class="popup-info">
                                 <h3>{{ product.title }}</h3>
                                 <p class="price">{{ product.price | money }}</p>
 
                                 <div class="popup-description">
                                     {{ product.description }}
                                 </div>
+                            </div>
+                            </div>
 
+                            <div class="popup-details">
                                 {% for option in product.options_with_values %}
                                     <div class="product-option" data-option-position="{{ option.position }}">
                                         <label>{{ option.name }}</label>
