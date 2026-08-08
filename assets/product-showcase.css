@@ -124,9 +124,13 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 16px 0 13px;
+    outline: 0;
 }
 .custom-toggle-icon{
     border-left: 1px solid #000;
     padding-left: 16px;
     transition: .3s;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
