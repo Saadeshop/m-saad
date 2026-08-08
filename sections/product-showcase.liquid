@@ -163,7 +163,107 @@ document.addEventListener('click', e => {
         popup.querySelector('[name="id"]').value = variant?.id || '';
         return;
     }
-})
+
+    if (atc) {
+        const popup = atc.closest('.popup');
+        const form = atc.closest('.popup-form');
+        const message = form.querySelector('.variant-message');
+        const id = Number(form.querySelector('[name="id"]').value);
+        const variants = JSON.parse(popup.querySelector('.product-variants').textContent);
+
+        if(!id) {
+            const missing = [...popup.querySelectorAll('.product-option')]
+                .filter(group => !group.querySelector(
+                    '.custom-select-option.selected, .option-value.selected'
+                ))
+                .map(group => group.querySelector('label').textContent.trim());
+
+                message.textContent = missing.length
+                    ? `Please select ${missing.join(' and ')}`
+                    : `This combination is unavailable`;
+
+                return;
+        }
+
+        const variant = variants.find(variant => variant.id === id);
+
+        id (!variant) {
+            message.textContent = 'This combination is unavailable';
+            return;
+        }
+
+        const hasBlack = variant.options.some(
+            value => value.toLowerCase() === 'black';
+        );
+        const hasMedium = variant.options.some(
+            value => value.toLowerCase() === 'm';
+        );
+
+        const items = [{
+            id,
+            quantity: 1
+        }];
+
+        const autoProduct = popup.querySelector('.auto-add-product');
+
+        if(hasBlack && hasMedium && autoProduct) {
+            const autoProductData = JSON.parse(autoProduct.textContent);
+
+            if(autoProductData.id) {
+                items.push({
+                    id: Number(autoProductData.id).
+                    quantity: 1
+                });
+            }
+        }
+
+        message.textContent = '';
+        atc.classList.add('loading');
+
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                Accept: 'application/json'
+            },
+            body: JSON.stringify({ items })
+        })
+        .then(response => {
+            if(!response.ok) throw new Error();
+            return response.json();
+        })
+        .then(async cartData => {
+            document.dispatchEvent(
+                new CustomEvent('cart:update', {
+                    detail: {
+                        data: cartData
+                    }
+                })
+            );
+
+            if(window.theme?.cart?.update) {
+                await.window.theme.cart.update();
+            }
+
+            const cartIcon =
+                document.querySelector('cart-icon-component') || document.querySelector('[data-cart-icon]');
+
+                if(cartIcon?.update) {
+                    cartIcon.up(cartData);
+                }
+                atc.classList.remove('loading');
+                atc.querySelector('.atc-text').textContent = 'ADDED TO CART';
+
+                setTimeout(() => {
+                    atc.querySelector('.atc-text').textContent = 'ADD TO CART';
+                }, 1500);
+        });
+        return;
+    }
+    if(e.target.classList.contains('popup-overlay')) {
+        e.target.classList.remove('active');
+    }
+});
 </script>
 
 {% schema %}
