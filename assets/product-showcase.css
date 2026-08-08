@@ -47,3 +47,9 @@
     top: 12px;
     right: 12px;
 }
+.popup-info h3{
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-family: Jost;
+}
