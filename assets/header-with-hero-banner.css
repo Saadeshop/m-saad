@@ -176,12 +176,8 @@
     left: 16px;
     cursor: pointer;
 }
-.hero-header__menu svg{
-    transition: .3s;
-}
 .hero-header__menu svg:last-child{
-    opacity: 0;
-    visibility: hidden;
+    display: none;
 }
 .hero-header__dropdown {
     background: #F2F2F2;
@@ -195,12 +191,10 @@
     max-height: 500px;
 }
 .section-mobile.is-open .hero-header__menu svg:first-child{
-    opacity: 0;
-    visibility: hidden;
+    display: none;
 }
 .section-mobile.is-open .hero-header__menu svg:last-child{
-    opacity: 1;
-    visibility: visible;
+    display: block;
 }
 .hero-header-content {
     width: 100%;
