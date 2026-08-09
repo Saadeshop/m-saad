@@ -63,7 +63,7 @@
 
             {% if image_desktop !=blank %}
             <div class="hero-banner__image">
-                <div class="hero-banner__desktop">
+                <div class="hero-banner__desktop{% if image_mobile !=blank %} is-hidden-mobile-only{% endif %}">
                     {{-
                         image_desktop
                         | image_url: width: 3840
@@ -75,6 +75,7 @@
                             sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
                     -}}
                 </div>
+                {% if image_mobile !=blank %}
                 <div class="hero-banner__mobile">
                     {{-
                         image_mobile
@@ -87,6 +88,7 @@
                             sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
                     -}}
                 </div>
+                {% endif %}
             </div>
             <div class="hero-banner__content section">
                 <div class="hero-banner__content-wrapper">
