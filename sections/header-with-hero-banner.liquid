@@ -54,6 +54,7 @@
         <div class="header-hero__banner" id="shopify-block-{{ block.id }}">
             {% liquid
               assign image_desktop = block.settings.image_desktop
+              assign image_mobile = block.settings.image_mobile
               assign heading = block.settings.heading
               assign subheading = block.settings.subheading
               assign button_label = block.settings.button_label
@@ -69,8 +70,20 @@
                         | image_tag:
                             width: image_desktop.width,
                             widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
-                            height: logo.height,
-                            alt: shop.name,
+                            height: image_desktop.height,
+                            alt: image_desktop.alt,
+                            sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
+                    -}}
+                </div>
+                <div class="hero-banner__mobile">
+                    {{-
+                        image_mobile
+                        | image_url: width: 3840
+                        | image_tag:
+                            width: image_mobile.width,
+                            widths: '240, 352, 832, 1200, 1600, 1920, 2560, 3840',
+                            height: image_mobile.height,
+                            alt: image_mobile.alt,
                             sizes: '(min-width: 750px) calc(var(--logo-width)), 100vw'
                     -}}
                 </div>
