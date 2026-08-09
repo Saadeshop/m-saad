@@ -260,5 +260,8 @@
     margin: 0 0 20px !important;
     text-align: center;
 }
+.product-showcase-section {
+    padding: 40px 0 20px;
+}
 
 }
