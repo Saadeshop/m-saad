@@ -19,17 +19,29 @@
             assign product = block.settings.product
             assign top = block.settings.top
             assign left = block.settings.left
+            assign top_m = block.settings.top_m
+            assign left_m = block.settings.left_m
             %}
 
             {% if product !=blank %}
                 <div class="product-showcase-card">
 
                     {% style %}
-                    .popup-dot-{{ block.id }}{
-                        position: absolute;
-                        top: {{ top }}%;
-                        left: {{ left }}%;
-                        transform: translate(-{{ left }}%, -{{ top }}%);
+                    @media screen and (min-width: 750px){
+                        .popup-dot-{{ block.id }}{
+                            position: absolute;
+                            top: {{ top }}%;
+                            left: {{ left }}%;
+                            transform: translate(-{{ left }}%, -{{ top }}%);
+                        }
+                    }
+                    @media screen and (max-width: 749px){
+                        .popup-dot-{{ block.id }}{
+                            position: absolute;
+                            top: {{ top_m }}%;
+                            left: {{ left_m }}%;
+                            transform: translate(-{{ left_m }}%, -{{ top_m }}%);
+                        }
                     }
                     {% endstyle %}
 
@@ -157,7 +169,7 @@
             },
             {
                 "type": "header",
-                "content": "Dot Position"
+                "content": "Dot Position Desktop"
             },
             {
                 "type": "range",
@@ -175,6 +187,28 @@
                 "min": 0,
                 "max": 100,
                 "default": 50,
+                "step": 1
+            },
+            {
+                "type": "header",
+                "content": "Dot Position Mobile"
+            },
+            {
+                "type": "range",
+                "label": "Top (%)",
+                "id": "top_m",
+                "min": 0,
+                "max": 100,
+                "default": 13,
+                "step": 1
+            },
+            {
+                "type": "range",
+                "label": "Left (%)",
+                "id": "left_m",
+                "min": 0,
+                "max": 100,
+                "default": 68,
                 "step": 1
             } 
         ]
