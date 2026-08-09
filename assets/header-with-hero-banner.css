@@ -178,6 +178,13 @@
 .hero-header__menu svg:last-child{
     display: none;
 }
+.hero-header__dropdown {
+    background: #F2F2F2;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    width: 100%;
+}
 
 
 }
