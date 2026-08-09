@@ -36,12 +36,12 @@
                 </a>
                 {% endif %}
                 {% if text !=blank %}
-                <div class="hero-header-content">
+                <div class="hero-header-content is-hidden-mobile-only">
                     {{ text }}
                 </div>
                 {% endif %}
                 {% if button_label !=blank %}
-                <div class="hero-header-button">
+                <div class="hero-header-button is-hidden-mobile-only">
                     <a {% if button_link %}href="{{ button_link }}"{% endif %}>
                         <span>{{ button_label }} {% render 'icon-arrow-right' %}</span>
                     </a>
