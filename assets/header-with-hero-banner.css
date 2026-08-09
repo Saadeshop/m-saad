@@ -114,6 +114,9 @@
     text-align: center;
 }
 
+
+/* # Responsive CSS
+=========================================== */
 @media screen and (min-width: 750px){
 
 .hero-banner__mobile{
