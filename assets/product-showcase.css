@@ -245,8 +245,8 @@
 @media screen and (max-width: 749px){
 
 .product-showcase-card {
-    width: calc(50% - 8px);
-    margin: 0 4px 4px;
+    width: calc(50% - 4px);
+    margin: 0 2px 4px;
 }
 .product-showcase-card img {
     height: 186px;
