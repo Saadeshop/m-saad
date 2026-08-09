@@ -206,14 +206,12 @@
     margin-bottom: 16px;
     padding-top: 25px;
 }
-.hero-header-button{
+.section-mobile .hero-header-button{
     padding-bottom: 25px;
+    text-align: center;
 }
 .hero-header-button a{
     display: inline-block;
-}
-.hero-header-button{
-    text-align: center;
 }
 .section-mobile{
     display: flex;
