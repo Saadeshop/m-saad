@@ -170,7 +170,11 @@
 .hero-header-logo {
     width: 100%;
 }
-
+.hero-header__menu {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
 
 
 }
