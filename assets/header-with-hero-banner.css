@@ -119,6 +119,9 @@
 .hero-banner__mobile{
     display: none;
 }
+.is-hidden-desktop-only{
+    display: none;
+}
     
 }
 
