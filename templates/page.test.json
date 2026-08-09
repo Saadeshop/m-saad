@@ -76,6 +76,7 @@
           "type": "banner",
           "settings": {
             "image_desktop": "shopify://shop_images/Group_1000008197.svg",
+            "image_mobile": "shopify://shop_images/Frame.svg",
             "heading": "The Gift Guide",
             "subheading": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>",
             "button_label": "Shop Now",
@@ -106,7 +107,9 @@
           "settings": {
             "product": "black-leather-bag",
             "top": 57,
-            "left": 64
+            "left": 64,
+            "top_m": 13,
+            "left_m": 68
           }
         },
         "product_BXianz": {
@@ -114,7 +117,9 @@
           "settings": {
             "product": "blue-silk-tuxedo",
             "top": 53,
-            "left": 85
+            "left": 85,
+            "top_m": 13,
+            "left_m": 68
           }
         },
         "product_7MzQ8c": {
@@ -122,7 +127,9 @@
           "settings": {
             "product": "chequered-red-shirt",
             "top": 20,
-            "left": 63
+            "left": 63,
+            "top_m": 13,
+            "left_m": 68
           }
         },
         "product_etwGqK": {
@@ -130,7 +137,9 @@
           "settings": {
             "product": "classic-leather-jacket",
             "top": 17,
-            "left": 70
+            "left": 70,
+            "top_m": 13,
+            "left_m": 68
           }
         },
         "product_mh3jgX": {
@@ -138,7 +147,9 @@
           "settings": {
             "product": "classic-varsity-top",
             "top": 25,
-            "left": 50
+            "left": 50,
+            "top_m": 13,
+            "left_m": 68
           }
         },
         "product_wx7934": {
@@ -146,7 +157,9 @@
           "settings": {
             "product": "dark-denim-top",
             "top": 40,
-            "left": 75
+            "left": 75,
+            "top_m": 13,
+            "left_m": 68
           }
         }
       },
@@ -160,6 +173,7 @@
       ],
       "name": "Product Showcase",
       "settings": {
+        "title": "Tisso vison in the wild",
         "auto_add_product": "dark-winter-jacket"
       }
     }
