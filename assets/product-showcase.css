@@ -115,6 +115,9 @@
     position: relative;
     cursor: pointer;
 }
+.is-color button.selected{
+    color: #fff;
+}
 .is-color button:first-child{
     border-left: 1px solid #000;
 }
