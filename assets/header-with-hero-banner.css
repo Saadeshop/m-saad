@@ -199,6 +199,9 @@
 .hero-header-button{
     text-align: center;
 }
+.section-mobile{
+    display: flex;
+}
 
 
 }
