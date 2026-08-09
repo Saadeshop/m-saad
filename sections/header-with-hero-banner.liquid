@@ -11,11 +11,13 @@
             assign button_label = block.settings.button_label
             assign button_link = block.settings.button_link
             assign header_bg = block.settings.header_bg
+            assign header_text_color = block.settings.header_text_color
         %}
 
          {% style %}
             #shopify-block-{{ block.id }} {
                 background: {{ header_bg }};
+                color: {{ header_text_color }};
             }
         {% endstyle %}
 
@@ -226,6 +228,12 @@
             {
                 "type": "header",
                 "content": "Colors"
+            },
+            {
+                "type": "color",
+                "label": "Text",
+                "id": "header_text_color",
+                "default": "#000"
             },
             {
                 "type": "color_background",
