@@ -139,9 +139,14 @@
 
         {% if content !=blank %}
         <div class="header-hero__bottom-bar section" id="shopify-block-{{ block.id }}">
-            <div class="header-bottom__content">
+            <div class="header-bottom__content{% if content_m !=blank %} is-hidden-mobile-only{% endif %}">
                 {{ content }}
             </div>
+            {% if content_m !=blank %}
+                <div class="header-bottom__content is-hidden-desktop-only">
+                    {{ content_m }}
+                </div>
+            {% endif %}
         </div>
         {% endif %}
     {% endif %}
