@@ -45,7 +45,9 @@
     display: flex;
     align-items: flex-end;
     gap: 8px;
-    margin-bottom: 10px;
+}
+.product-option {
+    margin-top: 10px;
 }
 .popup .close{
     all: unset;
