@@ -15,9 +15,11 @@
         %}
 
          {% style %}
+            #shopify-block-{{ block.id }} .hero-header-content {
+                color: {{ header_text_color }};
+            }
             #shopify-block-{{ block.id }} {
                 background: {{ header_bg }};
-                color: {{ header_text_color }};
             }
         {% endstyle %}
 
