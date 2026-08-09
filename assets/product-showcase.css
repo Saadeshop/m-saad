@@ -123,14 +123,14 @@
 .is-color button.selected{
     color: #fff;
 }
-.options-wrapper:has(.option-value:nth-child(1).selected)::before {
+.option-values:has(.option-value:first-child.selected)::before {
   left: 0;
   opacity: 1;
   visibility: visible;
 }
 
-/* Second selected */
-.options-wrapper:has(.option-value:nth-child(2).selected)::before {
+/* Second button selected */
+.option-values:has(.option-value:nth-child(2).selected)::before {
   left: 50%;
   opacity: 1;
   visibility: visible;
