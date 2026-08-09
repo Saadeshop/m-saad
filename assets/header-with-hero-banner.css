@@ -188,7 +188,6 @@
     transition: max-height 0.3s ease;
 }
 .section-mobile.is-open .hero-header__dropdown {
-    padding: 25px 0;
     max-height: 500px;
 }
 .hero-header-content {
