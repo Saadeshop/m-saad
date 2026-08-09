@@ -175,6 +175,9 @@
     left: 0;
     cursor: pointer;
 }
+.hero-header__menu svg:last-child{
+    display: none;
+}
 
 
 }
