@@ -93,6 +93,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+.is-color .option-values:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: #000;
+}
 .is-color button{
     border: 1px solid #000;
     border-left: 0;
