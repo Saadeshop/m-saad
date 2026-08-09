@@ -191,7 +191,8 @@ const menu = document.querySelector('.hero-header__menu');
 const dropdown = document.querySelector('.hero-header__dropdown');
 
 menu.addEventListener('click', () => {
-  dropdown.classList.toggle('show');
+  menu.classList.toggle('is-open');
+  dropdown.classList.toggle('is-open');
 });
 </script>
 

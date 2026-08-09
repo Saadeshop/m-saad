@@ -182,12 +182,14 @@
 .hero-header__dropdown {
     background: #F2F2F2;
     z-index: 1;
-    display: none;
     width: 100%;
     padding: 25px 0;
+    max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
-.hero-header__dropdown.show {
-  display: block;
+.hero-header__dropdown.is-open {
+  max-height: 500px;
 }
 .hero-header-content {
     width: 100%;
