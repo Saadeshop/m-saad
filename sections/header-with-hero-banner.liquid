@@ -61,6 +61,16 @@
               assign button_link = block.settings.button_link
             %}
 
+            <div class="header-hero__content-mobile is-hidden-desktop-only">
+                {% if heading !=blank %}
+                    <h2>{{ heading }}</h2>
+                {% endif %}
+
+                {% if subheading !=blank %}
+                <div class="rte">{{ subheading }}</div>
+                {% endif %}
+            </div>
+
             {% if image_desktop !=blank %}
             <div class="hero-banner__image">
                 <div class="hero-banner__desktop{% if image_mobile !=blank %} is-hidden-mobile-only{% endif %}">
@@ -93,11 +103,11 @@
             <div class="hero-banner__content section">
                 <div class="hero-banner__content-wrapper">
                     {% if heading !=blank %}
-                        <h2>{{ heading }}</h2>
+                        <h2 class="is-hidden-mobile-only">{{ heading }}</h2>
                     {% endif %}
 
                     {% if subheading !=blank %}
-                    <div class="rte">{{ subheading }}</div>
+                    <div class="rte is-hidden-mobile-only">{{ subheading }}</div>
                     {% endif %}
 
                     {% if button_label !=blank %}
