@@ -189,6 +189,9 @@
 .hero-header-content {
     width: 100%;
 }
+.hero-header-button a{
+    display: inline-block;
+}
 
 
 }
