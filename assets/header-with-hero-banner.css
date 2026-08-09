@@ -190,6 +190,12 @@
 .section-mobile.is-open .hero-header__dropdown {
     max-height: 500px;
 }
+.section-mobile.is-open .hero-header__menu svg:first-child{
+    display: none;
+}
+.section-mobile.is-open .hero-header__menu svg:last-child{
+    display: block;
+}
 .hero-header-content {
     width: 100%;
     margin-bottom: 16px;
