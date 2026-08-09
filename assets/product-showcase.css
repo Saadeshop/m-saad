@@ -123,6 +123,15 @@
 .is-color button.selected{
     color: #fff;
 }
+.option-values:has(.option-value:first-child.selected)::before{
+    opacity: 1;
+    visibility: visible;
+}
+.option-values:has(.option-value:last-child.selected)::before{
+    left: 50%;
+    opacity: 1;
+    visibility: visible;
+}
 .is-color button:first-child{
     border-left: 1px solid #000;
 }
