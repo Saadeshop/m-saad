@@ -183,9 +183,6 @@
     background: #F2F2F2;
     z-index: 1;
     display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
     padding: 25px 0;
 }
@@ -201,6 +198,7 @@
 }
 .section-mobile{
     display: flex;
+    flex-direction: column;
 }
 
 
