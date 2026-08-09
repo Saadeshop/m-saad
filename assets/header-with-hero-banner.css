@@ -151,5 +151,13 @@
 .hero-banner__content{
     padding-bottom: 39px;
 }
+.header-hero__content-mobile {
+    text-align: center;
+    padding: 49px 10px 12px;
+}
+.header-hero__content-mobile h2{
+    font-size: 30px;
+    margin-bottom: 24px;
+}
 
 }
