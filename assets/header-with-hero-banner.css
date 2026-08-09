@@ -131,7 +131,7 @@
 @media screen and (max-width: 749px){
 
 .is-hidden-mobile-only{
-    display: none;
+    display: none !important;
 }
 .header-hero__bottom-bar {
     padding: 6px 0;
