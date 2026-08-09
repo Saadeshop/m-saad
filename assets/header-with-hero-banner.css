@@ -148,5 +148,8 @@
     width: 193px;
     height: 45px;
 }
+.hero-banner__content{
+    padding-bottom: 39px;
+}
 
 }
