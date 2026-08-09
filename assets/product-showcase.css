@@ -92,6 +92,7 @@
 .is-color .option-values{
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 .is-color .option-values:before{
     content: '';
