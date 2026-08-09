@@ -137,6 +137,9 @@
     padding: 6px 0;
     font-size: 14px;
 }
+.secondary--btn {
+    justify-content: center;
+}
 .secondary--btn a {
     width: 193px;
     height: 45px;
