@@ -198,6 +198,9 @@
 .section-mobile.is-open .hero-header__menu svg:last-child{
     display: block;
 }
+.section-mobile.is-open .header-section{
+    box-shadow: 0px 2px 4px 0px #00000026;
+}
 .hero-header-content {
     width: 100%;
     margin-bottom: 16px;
