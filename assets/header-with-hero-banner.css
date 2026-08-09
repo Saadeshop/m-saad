@@ -162,7 +162,10 @@
 .hero-header-logo img {
     width: 150px;
 }
-
+.header-section {
+    padding: 23px 0;
+    justify-content: center;
+}
 
 
 
