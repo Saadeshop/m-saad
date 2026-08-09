@@ -125,11 +125,14 @@
     {% elsif block.type == 'bottom_bar' %}
         {% liquid
             assign content = block.settings.content
+            assign content_m = block.settings.content_m
+            assign content_color = block.settings.content_color
             assign content_bg = block.settings.content_bg
          %}
 
          {% style %}
             #shopify-block-{{ block.id }} {
+                color: {{ content_color }};
                 background: {{ content_bg }};
             }
          {% endstyle %}
@@ -236,13 +239,25 @@
         "settings": [
             {
                 "type": "richtext",
-                "label": "Content",
+                "label": "Content (Desktop)",
                 "id": "content",
                 "default": "<p>SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL</p>"
             },
             {
+                "type": "richtext",
+                "label": "Content (Mobile)",
+                "id": "content_m",
+                "default": "<p>SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR</p>"
+            },
+            {
                 "type": "header",
                 "content": "Colors"
+            },
+            {
+                "type": "color_background",
+                "label": "Text",
+                "id": "content_color",
+                "default": "#000"
             },
             {
                 "type": "color_background",
