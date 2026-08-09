@@ -137,5 +137,13 @@
     padding: 6px 0;
     font-size: 14px;
 }
+.secondary--btn a {
+    width: 193px;
+    height: 45px;
+}
+.secondary--btn a:before{
+    width: 193px;
+    height: 45px;
+}
 
 }
