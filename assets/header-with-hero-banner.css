@@ -165,6 +165,7 @@
 }
 .header-section {
     padding: 23px 16px;
+    display: flex;
     justify-content: center;
 }
 .hero-header-logo {
@@ -172,7 +173,7 @@
 }
 .hero-header__menu {
     position: absolute;
-    left: 0;
+    left: 16px;
     cursor: pointer;
 }
 .hero-header__menu svg:last-child{
@@ -196,9 +197,6 @@
 }
 .hero-header-button{
     text-align: center;
-}
-.section-mobile{
-    display: flex;
 }
 
 
