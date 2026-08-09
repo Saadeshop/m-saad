@@ -130,5 +130,9 @@
 .is-hidden-mobile-only{
     display: none;
 }
+.header-hero__bottom-bar {
+    padding: 6px 0;
+    font-size: 14px;
+}
 
 }
