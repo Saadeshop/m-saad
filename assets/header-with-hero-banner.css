@@ -183,6 +183,7 @@
     z-index: 1;
     display: block;
     position: absolute;
+    top: 100%;
     width: 100%;
 }
 
