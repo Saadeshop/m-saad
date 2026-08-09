@@ -161,12 +161,15 @@
 }
 .hero-header-logo img {
     width: 150px;
+    margin: 0 auto;
 }
 .header-section {
     padding: 23px 0;
     justify-content: center;
 }
-
+.hero-header-logo {
+    width: 100%;
+}
 
 
 
