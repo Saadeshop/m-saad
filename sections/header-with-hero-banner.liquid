@@ -57,17 +57,32 @@
               assign image_mobile = block.settings.image_mobile
               assign heading = block.settings.heading
               assign subheading = block.settings.subheading
+              assign heading_m = block.settings.heading_m
+              assign subheading_m = block.settings.subheading_m
+              assign heading_color = block.settings.heading_color
+              assign subheading_color = block.settings.subheading_color
               assign button_label = block.settings.button_label
               assign button_link = block.settings.button_link
             %}
 
+            {% style %}
+            #shopify-block-{{ block.id }} .hero-banner__content- h2,
+            #shopify-block-{{ block.id }} .header-hero__content-mobile h2{
+                color: {{ heading_color }};
+            }
+            #shopify-block-{{ block.id }} .hero-banner__content- .rte,
+            #shopify-block-{{ block.id }} .header-hero__content-mobile .rte{
+                color: {{ subheading_color }};
+            }
+            {% endstyle %}
+
             <div class="header-hero__content-mobile is-hidden-desktop-only">
-                {% if heading !=blank %}
-                    <h2>{{ heading }}</h2>
+                {% if heading_m !=blank %}
+                    <h2>{{ heading_m }}</h2>
                 {% endif %}
 
-                {% if subheading !=blank %}
-                <div class="rte">{{ subheading }}</div>
+                {% if subheading_m !=blank %}
+                <div class="rte">{{ subheading_m }}</div>
                 {% endif %}
             </div>
 
@@ -103,11 +118,11 @@
             <div class="hero-banner__content section">
                 <div class="hero-banner__content-wrapper">
                     {% if heading !=blank %}
-                        <h2 class="is-hidden-mobile-only">{{ heading }}</h2>
+                        <h2 {% if heading_m !=blank %}class="is-hidden-mobile-only"{% endif %}>{{ heading }}</h2>
                     {% endif %}
 
                     {% if subheading !=blank %}
-                    <div class="rte is-hidden-mobile-only">{{ subheading }}</div>
+                    <div class="rte{% if subheading_m !=blank %} is-hidden-mobile-only{% endif %}">{{ subheading }}</div>
                     {% endif %}
 
                     {% if button_label !=blank %}
