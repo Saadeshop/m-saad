@@ -165,7 +165,6 @@
 }
 .header-section {
     padding: 23px 16px;
-    display: flex;
     justify-content: center;
 }
 .hero-header-logo {
@@ -197,6 +196,9 @@
 }
 .hero-header-button{
     text-align: center;
+}
+.section-mobile{
+    display: flex;
 }
 
 
