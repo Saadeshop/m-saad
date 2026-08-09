@@ -255,5 +255,10 @@
     width: 15px;
     height: 15px;
 }
+.product-showcase-title {
+    font-size: 24px;
+    margin: 0 0 20px !important;
+    text-align: center;
+}
 
 }
