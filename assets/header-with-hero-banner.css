@@ -204,6 +204,10 @@
 .hero-header-content {
     width: 100%;
     margin-bottom: 16px;
+    padding-top: 25px;
+}
+.hero-header-button{
+    padding-bottom: 25px;
 }
 .hero-header-button a{
     display: inline-block;
